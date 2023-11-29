@@ -104,6 +104,12 @@
       "languageVersion": "3.0"
     },
     {
+      "name": "get",
+      "rootUri": "file:///C:/Users/USER/AppData/Local/Pub/Cache/hosted/pub.dev/get-4.6.6",
+      "packageUri": "lib/",
+      "languageVersion": "2.15"
+    },
+    {
       "name": "http",
       "rootUri": "file:///C:/Users/USER/AppData/Local/Pub/Cache/hosted/pub.dev/http-1.1.0",
       "packageUri": "lib/",
@@ -302,7 +308,7 @@
       "languageVersion": "3.1"
     }
   ],
-  "generated": "2023-11-27T14:38:40.531008Z",
+  "generated": "2023-11-29T14:53:38.767588Z",
   "generator": "pub",
   "generatorVersion": "3.1.0"
 }
