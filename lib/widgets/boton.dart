@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:panalavista_definitivo/pages/login.dart';
+import 'package:panalavista_definitivo/pages/pestanas_de_logeo/registro1.dart';
 
 class MyBotonInicio extends StatefulWidget {
   const MyBotonInicio({super.key});
@@ -17,7 +18,7 @@ class _MyBotonInicioState extends State<MyBotonInicio> {
           FilledButton(
             onPressed: () {
               Navigator.of(context).push(MaterialPageRoute(
-                builder: (context) => MyLoginDeInicio(),
+                builder: (context) => MyRegistroPage(),
               ));
             },
             child: Text(
