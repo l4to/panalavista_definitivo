@@ -18,22 +18,65 @@ class MyFavoritos extends StatelessWidget {
                   Panaderias(
                     panaderia: "Panaderia Flor",
                     panaderos: "Flora Martinez",
+                    click: () {
+                      
+                    },
                   ),
                   Panaderias(
                     panaderia: "Ariana's",
                     panaderos: "Ariana Shonn",
+                    click: () {
+                      
+                    },
                   ),
                   Panaderias(
                     panaderia: "Panaderia el suculento",
                     panaderos: "Adam Sandler",
+                    click: () {
+                      
+                    },
                   ),
                   Panaderias(
                     panaderia: "Los Super Hermanos Wayro",
                     panaderos: "Jhonn Wayro, Peter Wayro",
+                    click: () {
+                      
+                    },
                   ),
                   Panaderias(
-                    panaderia: "Hanna's panaderia",
-                    panaderos: "Hanna Barbera",
+                    panaderia: "Los Super Hermanos Wayro",
+                    panaderos: "Jhonn Wayro, Peter Wayro",
+                    click: () {
+                      
+                    },
+                  ),
+                  Panaderias(
+                    panaderia: "Los Super Hermanos Wayro",
+                    panaderos: "Jhonn Wayro, Peter Wayro",
+                    click: () {
+                      
+                    },
+                  ),
+                  Panaderias(
+                    panaderia: "Los Super Hermanos Wayro",
+                    panaderos: "Jhonn Wayro, Peter Wayro",
+                    click: () {
+                      
+                    },
+                  ),
+                  Panaderias(
+                    panaderia: "Los Super Hermanos Wayro",
+                    panaderos: "Jhonn Wayro, Peter Wayro",
+                    click: () {
+                      
+                    },
+                  ),
+                  Panaderias(
+                    panaderia: "Los Super Hermanos Wayro",
+                    panaderos: "Jhonn Wayro, Peter Wayro",
+                    click: () {
+                      
+                    },
                   ),
                 ]),
               ),
@@ -49,10 +92,12 @@ class MyFavoritos extends StatelessWidget {
 class Panaderias {
   String panaderia;
   String panaderos;
+  final VoidCallback click;
 
   Panaderias({
     required this.panaderia,
     required this.panaderos,
+     required this.click,
   });
 }
 
@@ -72,6 +117,7 @@ class Lista_panaderias extends StatelessWidget {
             Icons.business,
             color: Color.fromARGB(255, 165, 80, 15),
           ),
+          onTap: todito.click ,
           title: Text(todito.panaderia),
           subtitle: Text(todito.panaderos),
           trailing: Icon(

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:panalavista_definitivo/pages/valoracion_comen.dart';
 import 'package:panalavista_definitivo/widgets/drawer.dart';
 
 class MyValoracion extends StatelessWidget {
@@ -15,7 +16,7 @@ class MyValoracion extends StatelessWidget {
       body: ListView(
         children: [
           _buildContainer(
-              "Jhon Fuentes", "Mejoraria la rapidez de la atencion", " ★ ★ ★"),
+              "Jhon Fuentes", "Mejorarar  de la atencion", " ★ ★ ★"),
           _buildContainer(
               "Branny Gomez", "Buena calidad y atencion", " ★ ★ ★ ★ ★"),
           _buildContainer("Jhan Rosas", "Muy calido la atencion", " ★ ★ ★ ★"),
@@ -32,7 +33,13 @@ class MyValoracion extends StatelessWidget {
           Icons.add_comment,
           size: 30,
         ),
-        onPressed: () {},
+        onPressed: () {
+              Navigator.of(context).push(MaterialPageRoute(
+                builder: (context) => Comentar(),
+              ));
+            
+
+        },
       ),
     );
   }

@@ -4,7 +4,7 @@
             "outputFile": "com.example.panalavista_definitivo.app-mergeDebugResources-20:/values-night-v8/values-night-v8.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Diego J\\Desktop\\CERTUS_clases\\CURSOS\\3 Ciclo\\Des y sop\\pagina_teamtnt\\panalavista_definitivo\\android\\app\\src\\main\\res\\values-night\\styles.xml",
+                    "source": "C:\\Users\\USER\\Documents\\GitHub\\versioulti\\panalavista_definitivo\\android\\app\\src\\main\\res\\values-night\\styles.xml",
                     "from": {
                         "startLines": "3,14",
                         "startColumns": "4,4",

@@ -1,7 +1,7 @@
 #!/bin/sh
 # This is a generated file; do not edit or check into version control.
-export "FLUTTER_ROOT=C:\Users\Diego J\Desktop\CERTUS_clases\CURSOS\3 Ciclo\Implementacion plataformas moviles\flutter"
-export "FLUTTER_APPLICATION_PATH=C:\Users\Diego J\Documents\GitHub\panalavista_definitivo\panalavista_definitivo"
+export "FLUTTER_ROOT=C:\Users\USER\Documents\android\flutter"
+export "FLUTTER_APPLICATION_PATH=C:\Users\USER\Documents\GitHub\versioulti\panalavista_definitivo"
 export "COCOAPODS_PARALLEL_CODE_SIGN=true"
 export "FLUTTER_BUILD_DIR=build"
 export "FLUTTER_BUILD_NAME=0.1.0"

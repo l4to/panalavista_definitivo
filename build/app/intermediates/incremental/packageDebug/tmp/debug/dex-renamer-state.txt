@@ -1,4 +1,4 @@
-#Thu Nov 23 11:49:50 PET 2023
-base.0=C\:\\Users\\Diego J\\Desktop\\CERTUS_clases\\CURSOS\\3 Ciclo\\Des y sop\\pagina_teamtnt\\panalavista_definitivo\\build\\app\\intermediates\\dex\\debug\\mergeDexDebug\\classes.dex
+#Mon Nov 27 09:13:26 PET 2023
+base.0=C\:\\Users\\USER\\Documents\\GitHub\\versioulti\\panalavista_definitivo\\build\\app\\intermediates\\dex\\debug\\mergeDexDebug\\classes.dex
 path.0=classes.dex
 renamed.0=classes.dex

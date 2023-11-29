@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:panalavista_definitivo/pages/pesta%C3%B1a_config/pesta%C3%B1a_cuenta.dart';
 import 'package:panalavista_definitivo/pages/pesta%C3%B1a_config/ubicaciones.dart';
+import 'package:panalavista_definitivo/widgets/drawer.dart';
 
 class MyPestanaConfig extends StatefulWidget {
   const MyPestanaConfig({super.key});
@@ -20,18 +21,18 @@ class _MyPestanaConfig extends State<MyPestanaConfig> {
                 color: Colors.white,
               )),
           toolbarHeight: 57,
-          backgroundColor: Color.fromARGB(255, 136, 59, 0),
-          leading: const Icon(
-            Icons.account_circle,
-            color: Color.fromARGB(252, 0, 0, 0),
-            size: 60,
-          ),
+          backgroundColor: Color.fromARGB(150, 21, 216, 118),
+         
         ),
-        body: Column(
+        drawer: Drawer(child: MyDrawer()),
+        body: Container(
+        child: SingleChildScrollView(
+          child: 
+        Column(
           children: [
             Botoncitos(
               figura: Icons.account_circle_outlined,
-              titulo: 'Mi cuenta            ',
+              titulo: 'Mi cuenta ',
               presionar: () {
                 Navigator.push(context,
                     MaterialPageRoute(builder: (context) => const MyCuenta()));
@@ -40,7 +41,7 @@ class _MyPestanaConfig extends State<MyPestanaConfig> {
             ),
             Botoncitos(
               figura: Icons.add_location_alt_outlined,
-              titulo: 'Mi ubicación       ',
+              titulo: 'Mi ubicación ',
               presionar: () {
                 Navigator.push(
                     context,
@@ -51,14 +52,14 @@ class _MyPestanaConfig extends State<MyPestanaConfig> {
             ),
             Botoncitos(
               figura: Icons.door_back_door_outlined,
-              titulo: 'Cerrar sesión      ',
+              titulo: 'Cerrar sesión ',
               presionar: () {
                 SystemNavigator.pop();
               },
               clikBoton: () {},
             ),
           ],
-        ));
+        ),)));
   }
 }
 
@@ -93,8 +94,7 @@ class Botoncitos extends StatelessWidget {
         ),
 
         onTap: presionar,
-        //shape: const RoundedRectangleBorder( side: BorderSide(color: Colors.black, width: 1),borderRadius: BorderRadius.zero,)
-        shape: Border(bottom: BorderSide(width: 1, color: Colors.black)),
+        
 
         title: Padding(
           padding: EdgeInsets.only(left: 20),

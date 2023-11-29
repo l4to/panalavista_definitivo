@@ -15,6 +15,7 @@ class MyLoginDeInicio extends StatelessWidget {
 
 Widget _Formulario(BuildContext context) {
   return Container(
+    child:SingleChildScrollView(
     child: Center(
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
@@ -29,14 +30,17 @@ Widget _Formulario(BuildContext context) {
         ],
       ),
     ),
-  );
+  ));
 }
 
 Widget _imagen() {
-  return Image(
+  return Container(
+    margin: EdgeInsets.only(top:130),
+
+    child:Image(
     width: 200,
     image: AssetImage("assets/images/logo.jpg"),
-  );
+  ));
 }
 
 Widget _titulo() {
