@@ -1,16 +1,23 @@
 import 'package:flutter/material.dart';
-import 'package:panalavista_definitivo/pages/Inicio.dart';
+import 'package:get/get.dart';
+
+import 'package:panalavista_definitivo/pages/pestanas_de_logeo/Login.dart';
 
 void main() {
   runApp(const MyApp());
 }
 
-class MyApp extends StatelessWidget {
+class MyApp extends StatefulWidget {
   const MyApp({super.key});
 
   @override
+  State<MyApp> createState() => _MyAppState();
+}
+
+class _MyAppState extends State<MyApp> {
+  @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return GetMaterialApp(
       title: 'Pan a la vista',
       theme: ThemeData(
         primaryColor: Colors.brown,
@@ -29,7 +36,7 @@ class MyApp extends StatelessWidget {
         ),
       ),
       debugShowCheckedModeBanner: false,
-      home: const MyHomePage(),
+      home: MyLogeoPage(),
     );
   }
 }
