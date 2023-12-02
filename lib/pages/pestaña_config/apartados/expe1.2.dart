@@ -34,15 +34,14 @@ class Apartado2 extends StatelessWidget {
         controller:_vertical ,
       child:
        Container(
-        width: 570,
+        width: 360,
         height: 800,
         decoration: BoxDecoration(
       gradient: LinearGradient(
         begin: Alignment.bottomLeft,
         end: Alignment.topRight,
         colors: [
-          Color.fromARGB(255, 186, 177, 54),
-          Color.fromARGB(255, 7, 44, 94),
+          Color.fromARGB(255, 212, 68, 1), Color.fromARGB(255, 185, 136, 1)
         ],
         stops: [0.3, 0.75],
       ),
@@ -143,7 +142,7 @@ class Apartado2 extends StatelessWidget {
     Container(
       height: 190,
       width: 150 ,
-      margin: EdgeInsets.only(top:30, left: 30, right: 30, bottom: 30),
+      margin: EdgeInsets.only(top:30, left: 16, right: 30, bottom: 30),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(10),
       
@@ -238,53 +237,9 @@ class Apartado2 extends StatelessWidget {
          width: 100,
         child:Text('panes mas elaborados con mieeerda'),),
         ]),
-        ),
+        )
 
-        Container(
-      height: 190,
-      width: 150 ,
-      margin: EdgeInsets.only(top:30, bottom: 30, right: 30,left: 30),
-      padding:  EdgeInsets.all(0),
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(10),
-      
-           boxShadow: [
-      BoxShadow(
-        color: Color.fromARGB(239, 231, 231, 231),
-        offset: Offset(0, 0),
-        blurRadius: 1,
-      ),
-    ],
-          ),
-     
-      child: ListView(
-        children: [
-           
-              Container(
-            
-            margin:  EdgeInsets.only(top: 19, right: 10,left: 10),
-            width: 0,
-            height: 70,
-            
-            
-            decoration: BoxDecoration(
-                  
-                     image: DecorationImage(
-                      
-                      image: AssetImage(
-                       imagaset),
-                       
-                      fit: BoxFit.cover,
-                    )
-                    ),
-                    
-           child:GestureDetector(
-          onTap: clikBoton2,),),
-         Container(
-          padding: EdgeInsets.only(top: 30,left: 40, right: 40),
-         width: 100,
-        child:Text('panes mas elaborados con mieeerda'),),
-        ]), ),
+       
     ]);
   }
 }
@@ -301,17 +256,51 @@ class ImageFullScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
+      appBar: AppBar(
+        backgroundColor: Color.fromARGB(255, 212, 68, 1),
+        title: Text('mi tienda'),
+      ),
       body: SizedBox.expand(
-        child: Hero(
+        
+        child:
+        Container(
+           decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(10),
+        gradient: LinearGradient(
+         colors: [ Color.fromARGB(255, 212, 68, 1), Color.fromARGB(255, 185, 136, 1)]),
+           boxShadow: [
+      BoxShadow(
+        offset: Offset(0,0),
+        blurRadius: 1,
+      ),
+    ],
+          ),
+          child:
+          Column(children: [
+            Container( 
+              margin: EdgeInsets.all(50),
+              child:
+            Text('TIENDITA SAN MIGUEL', style: TextStyle(color: Colors.white, fontSize: 20),),),
+          Container(
+            child:
+         Hero(
           tag: 'my_image',
           child: Image.asset(
             imageaset,
             fit: BoxFit.contain,
           ),
-        ),
+        ),),
+        Container( 
+              margin: EdgeInsets.all(0),
+              child:
+            Text('TIENDITA SAN MIGUEL', style: TextStyle(color: Color.fromARGB(255, 0, 0, 0), fontSize: 0),),),
+            Container( 
+              margin: EdgeInsets.all(0),
+              child:
+            Text('TIENDITA SAN MIGUEL', style: TextStyle(color: const Color.fromARGB(255, 0, 0, 0), fontSize: 0),),)
+            ,],),
       ),
-    );
+    ));
   }
 }
 
