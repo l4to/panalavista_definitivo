@@ -17,18 +17,29 @@ class MyRegistroPage2 extends StatelessWidget {
   }
 
   Widget _boxForm(BuildContext context) {
-    return SingleChildScrollView(
-      child: Column(
-        children: [
-          _textYourForm(),
-          _textFieldName(),
-          _textFieldLastName(),
-          _textFieldPhone(),
-          _textFieldEmail(),
-          _textFielPassword(),
-          _textFielConfirmPassword(),
-          _buttonRegistrar(context), // Cambiado el nombre del método
-        ],
+    return Container(
+      height: MediaQuery.of(context).size.height * 0.60,
+      margin: EdgeInsets.only(
+          top: MediaQuery.of(context).size.height * 0.25, left: 50, right: 50),
+      decoration: BoxDecoration(
+          color: Color.fromARGB(255, 230, 212, 167),
+          boxShadow: <BoxShadow>[
+            BoxShadow(
+                color: Colors.black, blurRadius: 10, offset: Offset(0, 0.5))
+          ]),
+      child: SingleChildScrollView(
+        child: Column(
+          children: [
+            _textYourForm(),
+            _textFieldName(),
+            _textFieldLastName(),
+            _textFieldPhone(),
+            _textFieldEmail(),
+            _textFielPassword(),
+            _textFielConfirmPassword(),
+            _buttonRegistrar(context), // Cambiado el nombre del método
+          ],
+        ),
       ),
     );
   }

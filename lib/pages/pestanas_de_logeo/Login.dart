@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:panalavista_definitivo/pages/Inicio2.dart';
 import 'package:panalavista_definitivo/pages/pestanas_de_logeo/registro2.dart';
 
 class MyLogeoPage extends StatelessWidget {
@@ -36,18 +37,22 @@ Widget _boxForm(BuildContext context) {
         _textYourForm(),
         _textFieldEmail(),
         _textFielPassword(),
-        _buttonLogin()
+        _buttonLogin(context)
       ]),
     ),
   );
 }
 
-Widget _buttonLogin() {
+Widget _buttonLogin(context) {
   return Container(
     width: double.infinity,
     margin: EdgeInsets.symmetric(horizontal: 40, vertical: 40),
     child: ElevatedButton(
-        onPressed: () {},
+        onPressed: () {
+          Navigator.of(context).push(MaterialPageRoute(
+            builder: (context) => MyLogeo(),
+          ));
+        },
         child: Text(
           "Iniciar Sesion",
           style: TextStyle(color: Color.fromARGB(255, 255, 255, 255)),
