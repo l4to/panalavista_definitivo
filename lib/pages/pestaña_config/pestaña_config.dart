@@ -21,7 +21,7 @@ class _MyPestanaConfig extends State<MyPestanaConfig> {
                 color: Colors.white,
               )),
           toolbarHeight: 57,
-          backgroundColor: Color.fromARGB(150, 21, 216, 118),
+          backgroundColor: Color.fromARGB(255, 136, 59, 0),
          
         ),
         drawer: Drawer(child: MyDrawer()),
@@ -89,7 +89,7 @@ class Botoncitos extends StatelessWidget {
 
         leading: Icon(
           figura,
-          color: Colors.black,
+          color: Color.fromARGB(255, 136, 59, 0),
           size: 40,
         ),
 

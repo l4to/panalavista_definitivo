@@ -22,7 +22,7 @@ class _MyUbicacionState extends State<MyUbicacion> {
                 color: Colors.white,
               )),
           toolbarHeight: 57,
-          backgroundColor: Color.fromARGB(150, 21, 216, 118),
+          backgroundColor: Color.fromARGB(255, 136, 59, 0),
           shadowColor: Colors.black,
           elevation: 14,
           //shadowColor: Colors.white,
@@ -52,43 +52,43 @@ class _MyUbicacionState extends State<MyUbicacion> {
             Botoncitos(
               subtitle2: 'Lampa',
               subtitle: 'Distrito',
-              icono: Icon(Icons.group_remove_rounded,color: Color.fromARGB(255, 0, 0, 0),size: 50),
+              icono: Icon(Icons.group_remove_rounded,color: Color.fromARGB(255, 136, 59, 0),size: 50),
              titulo: IconButton(onPressed: null, icon: Icon(null),)
             ),
             Botoncitos(
                 subtitle2: 'Arequipa',
                 subtitle: 'Departamento',
-                icono: Icon(Icons.group_remove_rounded,color: Color.fromARGB(255, 0, 0, 0),size: 50),
+                icono: Icon(Icons.group_remove_rounded,color: Color.fromARGB(255, 136, 59, 0),size: 50),
                 titulo: IconButton(onPressed: null, icon: Icon(null),)
                 ),
             Botoncitos(
                 subtitle2: 'Perú',
                 subtitle: 'Pais',
-                icono: Icon(Icons.group_remove_rounded,color: Color.fromARGB(255, 0, 0, 0),size: 50),
+                icono: Icon(Icons.group_remove_rounded,color: Color.fromARGB(255, 136, 59, 0),size: 50),
                titulo: IconButton(onPressed:null, icon: Icon(null),)
                ),
              Botoncitos(
                 subtitle2: longitud,
                 subtitle: 'Longitud',
-                icono: Icon(Icons.group_remove_rounded,color: Color.fromARGB(255, 0, 0, 0),size: 50),
+                icono: Icon(Icons.group_remove_rounded,color: Color.fromARGB(255, 136, 59, 0),size: 50),
                 titulo: IconButton(onPressed: null, icon: Icon(null),
                 
                 ),),
                Botoncitos(
                 subtitle2: latidud,
                 subtitle: 'Latitud',
-                icono: Icon(Icons.group_remove_rounded,color: Color.fromARGB(255, 0, 0, 0),size: 50),
+                icono: Icon(Icons.group_remove_rounded,color: Color.fromARGB(255, 136, 59, 0),size: 50),
                 titulo: IconButton(onPressed:null, icon: Icon(null),
                   
                 )),
             Botoncitos(
               subtitle2: '********',
               subtitle: 'IP                          ',
-              icono: Icon(Icons.group_remove_rounded,color: Color.fromARGB(255, 0, 0, 0),size: 50),
+              icono: Icon(Icons.group_remove_rounded,color:Color.fromARGB(255, 136, 59, 0),size: 50),
               titulo:IconButton(
                       icon: Icon(
                         Icons.remove_red_eye,
-                        color: Color.fromARGB(255, 0, 0, 0),
+                        color:Color.fromARGB(255, 136, 59, 0),
                         size: 50,
                       ),
                       onPressed: () {

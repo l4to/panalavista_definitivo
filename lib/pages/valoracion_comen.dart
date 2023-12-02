@@ -23,8 +23,8 @@ class ComentarState extends State<Comentar> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Da inicio a tu gran negocio Creemos juntos"),
-        backgroundColor: Color.fromARGB(255, 236, 47, 0),
+        title: const Text("Comentar :)"),
+        backgroundColor:Color.fromARGB(255, 136, 59, 0),
       ),
       body: 
       
@@ -32,7 +32,7 @@ class ComentarState extends State<Comentar> {
         child:
         Container( 
         height: 900,
-        color: Color.fromARGB(255, 255, 181, 111),
+        color: Color.fromARGB(255, 206, 163, 34),
         
         
         child: Padding(
@@ -42,15 +42,16 @@ class ComentarState extends State<Comentar> {
               Container(
                 width: 200,
                 padding: EdgeInsets.only(bottom: 20),
-               child:Text("Las opiniones son publicas y anonimas y no contienen información personal "),),
+               child:Text("Las opiniones son publicas y anonimas y no contienen información personal ",
+                style: TextStyle(color: Color.fromARGB(255, 136, 59, 0), fontSize: 17)),),
 
             Container(
-            margin:  EdgeInsets.only(left:23.0,top: 10, bottom: 10),
+            margin:  EdgeInsets.only(left:100.0,top: 10, bottom: 10),
             child: RatingBarCustom(
             sizeIcon: 20,
             numberStars: 10,
             starCount: 3.5,
-            colorStar: const Color.fromARGB(255, 71, 70, 68),),),
+            colorStar: const Color.fromARGB(255, 136, 59, 0),),),
               SizedBox(height: 20),
              
               _buildTextField("Describenos tu experiencia (opcional)"),
@@ -59,23 +60,45 @@ class ComentarState extends State<Comentar> {
 
               // Productos ofrecidos
               
-              
-              TextFormField(
-                controller: _controller,
-                decoration: InputDecoration( labelText: 'Agregar nombre (opcional)', contentPadding: EdgeInsets.only(top:36,bottom: 20), ),
-              ),
+              _buildTextnombre( ),
 
               // Botón para guardar los datos
+              Row(children: [
               Container(
-              margin: EdgeInsets.only(top:30),  
+              margin: EdgeInsets.only(top:30, left: 127),  
               child:
               ElevatedButton(
-                style: ButtonStyle(),
+                style: ElevatedButton.styleFrom(
+                    backgroundColor:Color.fromARGB(255, 0, 0, 0),
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(2)),
+                    foregroundColor: Color.fromARGB(255, 236, 236, 236),
+                  ),
+                
+                onPressed: () {
+                  // Aquí puedes guardar los datos ingresados
+                },
+                child: Text("cancelar"),
+              ),),
+
+              Container(
+              margin: EdgeInsets.only(top:30,left: 30),  
+              child:
+              ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                    backgroundColor:Color.fromARGB(255, 136, 59, 0),
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(2)),
+                    foregroundColor: Color.fromARGB(255, 236, 236, 236),
+                  ),
+                
                 onPressed: () {
                   // Aquí puedes guardar los datos ingresados
                 },
                 child: Text("publicar"),
               ),),
+              
+              ],),
             ],
           ),
         ),
@@ -88,8 +111,8 @@ class ComentarState extends State<Comentar> {
     return Container(
       padding: EdgeInsets.all(10),
       decoration: BoxDecoration(
-        border: Border.all(color: Colors.grey),
-        borderRadius: BorderRadius.circular(4),
+        border: Border.all(width: 3,color: const Color.fromARGB(255, 179, 0, 0)),
+        borderRadius: BorderRadius.circular(5),
       ),
       child: TextFormField(
         maxLines: 7,
@@ -99,6 +122,20 @@ class ComentarState extends State<Comentar> {
                 return;}
         },
       ),
+    );
+  }
+
+  Widget _buildTextnombre( ) {
+    return Container(
+      padding: EdgeInsets.all(10),
+      decoration: BoxDecoration(
+        border: Border.all(width: 3,color: const Color.fromARGB(255, 179, 0, 0,)),
+        borderRadius: BorderRadius.circular(5),
+      ),
+      child: TextFormField(
+                controller: _controller,
+                decoration: InputDecoration( labelText: 'Agregar nombre (opcional)', contentPadding: EdgeInsets.only(top:36,bottom: 20), ),
+              ),
     );
   }
 }

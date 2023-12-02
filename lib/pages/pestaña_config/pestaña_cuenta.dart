@@ -42,7 +42,7 @@ class _MyCuentaState extends State<MyCuenta> {
                 color: Colors.white,
               )),
           toolbarHeight: 57,
-          backgroundColor: Color.fromARGB(150, 21, 216, 118),
+          backgroundColor: Color.fromARGB(255, 136, 59, 0),
           shadowColor: Colors.black,
           elevation: 14,
           //shadowColor: Colors.white,
@@ -200,7 +200,7 @@ class Botoncitos extends StatelessWidget {
                   Icon(Icons.delete,size: 15,)],
                   ),
                   style: ElevatedButton.styleFrom(
-                    backgroundColor: Color.fromARGB(255, 2, 199, 28),
+                    backgroundColor: Color.fromARGB(255, 136, 59, 0),
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(5)),
                     foregroundColor: Color.fromARGB(255, 236, 236, 236),
@@ -261,7 +261,7 @@ class Botoncitos2 extends StatelessWidget {
               foregroundColor: Color.fromARGB(255, 255, 255, 255),
               shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(5)),
-              backgroundColor: Color.fromARGB(255, 27, 133, 1),
+              backgroundColor: Color.fromARGB(255, 71, 31, 0)
             ),
           ),
         ],
