@@ -25,7 +25,7 @@ class Apartado2 extends StatelessWidget {
         },
       ),
       appBar: AppBar(
-        title: Text("Panes mas comprados"),
+        title: Text("Panes mas compr ados"),
         backgroundColor: const Color.fromARGB(255, 136, 59, 0),
       ),
       drawer: Drawer(child: MyDrawer()),
