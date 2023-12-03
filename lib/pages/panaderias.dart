@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:panalavista_definitivo/pages/crear_panaderia/crear_panaderia.dart';
+import 'package:panalavista_definitivo/pages/pesta%C3%B1a_config/ubicaciones.dart';
 import 'package:panalavista_definitivo/widgets/drawer.dart';
 
 class MiPanaderia extends StatelessWidget {
@@ -28,26 +30,61 @@ class MiPanaderia extends StatelessWidget {
         backgroundColor: Color.fromARGB(255, 136, 59, 0),
       ),
       drawer: Drawer(child: MyDrawer()),
-      body: ListView(
+      body: Container(
+        decoration: BoxDecoration(
+        gradient: LinearGradient(
+         colors: [Color.fromARGB(255, 245, 191, 111), Color.fromARGB(255, 245, 191, 111)])),
+        child:
+      
+      ListView(
         children: [
+          
+          _busquedad(),
+
+          Row(
+            children:[
+          _iconos((){}, Icons.group_remove_rounded ),
+          _iconos((){}, Icons.group_remove_rounded ),
+          _iconos((){}, Icons.group_remove_rounded ),
+          _iconos((){}, Icons.group_remove_rounded ),
+          _iconos((){}, Icons.group_remove_rounded ),
+          _iconos((){}, Icons.group_remove_rounded ),
+          
+          ]
+          
+          ),
           _buildContainer(
-              "Panaderia 1", "Ubicacion: loremas asdmaksd", "5 estrellas"),
+              "Panaderia 1", "Ubicacion: loremas asdmak", "5 estrellas",(){ Navigator.of(context).push(MaterialPageRoute(builder: (BuildContext context){
+                return const MyUbicacion();
+              }));}),
           _buildContainer(
-              "Panaderia 2", "Ubicacion: lorem ipsum", "4 estrellas"),
+              "Panaderia 2", "Ubicacion: lorem ipsum", "4 estrellas",(){}),
+           _buildContainer(
+              "Panaderia 1", "Ubicacion: loremas asdmak", "5 estrellas",(){ Navigator.of(context).push(MaterialPageRoute(builder: (BuildContext context){
+                return const MyUbicacion();
+              }));}),
           _buildContainer(
-              "Panaderia 3", "Ubicacion: dolor sit amet", "3 estrellas"),
+              "Panaderia 2", "Ubicacion: lorem ipsum", "4 estrellas",(){}),
+           _buildContainer(
+              "Panaderia 1", "Ubicacion: loremas asdmak", "5 estrellas",(){ Navigator.of(context).push(MaterialPageRoute(builder: (BuildContext context){
+                return const MyUbicacion();
+              }));}),
           _buildContainer(
-              "Panaderia 4", "Ubicacion: dolor sit amet", "3 estrellas"),
+              "Panaderia 2", "Ubicacion: lorem ipsum", "4 estrellas",(){}),
+           _buildContainer(
+              "Panaderia 1", "Ubicacion: loremas asdmak", "5 estrellas",(){ Navigator.of(context).push(MaterialPageRoute(builder: (BuildContext context){
+                return const MyUbicacion();
+              }));}),
           _buildContainer(
-              "Panaderia 5", "Ubicacion: dolor sit amet", "3 estrellas"),
+              "Panaderia 2", "Ubicacion: lorem ipsum", "4 estrellas",(){}),
+           _buildContainer(
+              "Panaderia 1", "Ubicacion: loremas asdmak", "5 estrellas",(){ Navigator.of(context).push(MaterialPageRoute(builder: (BuildContext context){
+                return const MyUbicacion();
+              }));}),
           _buildContainer(
-              "Panaderia 6", "Ubicacion: dolor sit amet", "3 estrellas"),
-          _buildContainer(
-              "Panaderia 7", "Ubicacion: dolor sit amet", "3 estrellas"),
-          _buildContainer(
-              "Panaderia 8", "Ubicacion: dolor sit amet", "3 estrellas"),
+              "Panaderia 2", "Ubicacion: lorem ipsum", "4 estrellas",(){}),
         ],
-      ),
+      ),),
       bottomNavigationBar: BottomAppBar(
         color: Color.fromARGB(255, 136, 59, 0),
         child: Row(
@@ -71,19 +108,37 @@ class MiPanaderia extends StatelessWidget {
     );
   }
 
-  Widget _buildContainer(String title, String location, String rating) {
-    return Container(
+  Widget _buildContainer(String title, String location, String rating, VoidCallback clikBoton2,) {
+    return GestureDetector(
+      onTap: clikBoton2,
+      child:Column(children: [
+        
+      Container(
+       
       height: 120,
       margin: const EdgeInsets.all(10.0),
-      color: Color.fromARGB(255, 232, 221, 144),
       padding: const EdgeInsets.all(16.0),
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(10),
+        gradient: LinearGradient(
+         colors: [Color.fromARGB(255, 212, 68, 1), Color.fromARGB(255, 185, 136, 1)])),
       child: Row(
         children: [
-          Image.asset(
-            "assets/images/barco.jpg",
-            width: 100,
-            height: 100,
-          ),
+          Container(
+            
+            width: 85,
+            margin: const EdgeInsets.only(left:5.0),
+         decoration: BoxDecoration(
+                   
+                    
+                     image: DecorationImage(
+                      image: AssetImage(
+                       "assets/images/barco.jpg",),
+                      fit: BoxFit.cover,
+                    ),
+                    ),
+            ),
+          
           const SizedBox(width: 20),
           Expanded(
             child: Column(
@@ -105,6 +160,53 @@ class MiPanaderia extends StatelessWidget {
           ),
         ],
       ),
-    );
+    )],));
   }
 }
+
+Widget _busquedad() {
+  final TextEditingController _control = TextEditingController();
+    return Padding(
+      padding: const EdgeInsets.all(8.0),
+      child: TextField(
+        controller: _control,
+        decoration: InputDecoration(
+          labelText: "Buscar entre panaderia",
+          prefixIcon: Icon(Icons.search),
+          border: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(45.0),
+          ),
+        ),
+        onChanged: (query) {
+        },
+      ),
+    );
+  }
+
+  Widget _iconos(VoidCallback  clikBoton, IconData icon, ) {
+  final TextEditingController _control = TextEditingController();
+    return Container(
+      width: 60,
+      height: 60,
+      margin: EdgeInsets.all(10),
+      decoration: BoxDecoration(
+        border: Border.all(width: 3,color: const Color.fromARGB(255, 179, 0, 0,)),
+      ),
+      child:IconButton(
+                      icon: Icon(
+                        icon,
+                        color:Color.fromARGB(255, 136, 59, 0),
+                        size: 20,
+                      ),
+                      onPressed: clikBoton
+                  ), 
+                  
+      );
+                
+      
+    
+  }
+
+  
+
+

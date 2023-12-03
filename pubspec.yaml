@@ -18,6 +18,8 @@ dependencies:
   cupertino_icons: ^1.0.2
   http: ^1.1.0
   get: ^4.6.6
+  rating_bar_custom: ^0.0.1
+
 
 dev_dependencies:
   flutter_test:
