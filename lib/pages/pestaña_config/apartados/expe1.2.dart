@@ -30,8 +30,8 @@ class Apartado2 extends StatelessWidget {
       ),
       drawer: Drawer(child: MyDrawer()),
       body: SingleChildScrollView(
-        scrollDirection: Axis.horizontal,
-        controller:_vertical ,
+        scrollDirection: Axis.vertical,
+
       child:
        Container(
         width: 360,
@@ -46,8 +46,6 @@ class Apartado2 extends StatelessWidget {
         stops: [0.3, 0.75],
       ),
     ),
-        child:SingleChildScrollView(
-          scrollDirection: Axis.vertical,
         child: Container(child:
         Column(children: [
           apartados(
@@ -126,7 +124,7 @@ class Apartado2 extends StatelessWidget {
         ],
       ),
       
-    )))));
+    ))));
   }
 
   
@@ -291,14 +289,12 @@ class ImageFullScreen extends StatelessWidget {
           ),
         ),),
         Container( 
+          color: Colors.black,
               margin: EdgeInsets.all(0),
               child:
             Text('TIENDITA SAN MIGUEL', style: TextStyle(color: Color.fromARGB(255, 0, 0, 0), fontSize: 0),),),
-            Container( 
-              margin: EdgeInsets.all(0),
-              child:
-            Text('TIENDITA SAN MIGUEL', style: TextStyle(color: const Color.fromARGB(255, 0, 0, 0), fontSize: 0),),)
-            ,],),
+            
+            ],),
       ),
     ));
   }
