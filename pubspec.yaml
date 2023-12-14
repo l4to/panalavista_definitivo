@@ -21,6 +21,8 @@ dependencies:
   rating_bar_custom: ^0.0.1
 
 
+  rating_bar_custom: ^0.0.1
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
